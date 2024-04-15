@@ -1,0 +1,13 @@
+#statusType-select {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .leave-form {
+    width: 350px !important;
+    height: 60vh;
+    overflow-y: auto;
+  }
+}

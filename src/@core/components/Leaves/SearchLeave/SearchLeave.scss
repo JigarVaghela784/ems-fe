@@ -1,0 +1,61 @@
+.searchBtn {
+  min-height: 56px;
+  text-transform: uppercase !important;
+  padding: 12px !important;
+  background-color: #55ce63 !important;
+  border: 1px solid #55ce63 !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+.badgeContent {
+  border: 1px solid #13304b;
+  border-radius: 25px;
+  padding: 8px;
+  margin-left: 10px;
+  .badgeCloseIcon {
+    font-size: 16px;
+  }
+  button {
+    padding: 0;
+    margin-left: 4px;
+  }
+  span {
+    line-height: 1;
+  }
+}
+.btnClear {
+  padding: 0 !important;
+  .closeIcon {
+    font-size: 26px;
+  }
+}
+
+#leaveStatus-select {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.MuiPickersLayout-actionBar {
+  padding: 8px !important;
+}
+
+.MuiPickersSlideTransition-root {
+  min-height: 230px !important;
+}
+
+@media (max-width: 600px) {
+  .leave-search {
+    overflow-x: auto;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .leave-search {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}

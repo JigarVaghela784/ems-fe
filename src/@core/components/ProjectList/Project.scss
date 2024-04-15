@@ -1,0 +1,117 @@
+.project-list-wrapper {
+}
+
+.select-priority {
+  border-radius: 50px !important;
+  width: 150px !important;
+}
+
+.action-not-allowed {
+  opacity: 0.5 !important;
+  * {
+    cursor: not-allowed !important;
+  }
+}
+
+.assigned-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px 5px 0;
+}
+.roleName {
+  text-transform: capitalize;
+}
+.details {
+  display: flex;
+  gap: 20px;
+}
+
+.btnAdd {
+  max-width: 80px;
+  height: 40px;
+}
+
+.project-card-wrapper {
+  .MuiPaper-root {
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.employee-number{
+  display: flex;
+
+  .MuiAvatar-root.rest-employee {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+.card-heading {
+  .MuiCardHeader-content {
+    cursor: pointer;
+  }
+}
+.description-3-line {
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 68px;
+}
+.avatar-list {
+  .MuiAvatar-root {
+    font-size: 12px !important;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.them-color {
+  .MuiCardHeader-title {
+    color: #13304c !important;
+  }
+  color: #13304c !important;
+}
+
+.sticky-section {
+  position: sticky;
+  top: 68px;
+}
+
+.project-form-wrapper {
+  max-height: 75vh;
+  padding-top: 10px;
+}
+
+.project-table {
+  .MuiDataGrid-columnHeaderTitleContainerContent {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-form {
+    height: 70vh;
+    width: 350px !important;
+    overflow-y: auto;
+  }
+  .project-data {
+    position: relative !important;
+  }
+
+  .project-list {
+    margin-top: 10px !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .project-form {
+    width: 500px !important;
+    height: 90vh;
+  }
+}

@@ -1,0 +1,78 @@
+.remove-attribute-modal {
+  height: 100vh;
+  background: rgba(0, 9, 15, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999;
+  &__subtitle {
+    min-height: 22px;
+  }
+  &__content {
+    padding: 21px 32px 32px;
+    text-align: center;
+    width: 356px;
+    background: #ffffff;
+    border: 1px solid #ffe1e4eb;
+    box-shadow: 0px 71px 93px rgba(0, 43, 74, 0.06), 0px 15.8588px 20.7728px rgba(0, 43, 74, 0.0357664),
+      0px 4.72157px 6.1846px rgba(0, 43, 74, 0.0242336);
+    border-radius: 4px;
+    .warningIcon {
+      height: 60px;
+    }
+  }
+  &__closeIcon {
+    color: #8e9ba6;
+    text-align: end;
+    cursor: pointer;
+  }
+  &__btn {
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(244, 111, 111, 0.15), inset 0px -2px 4px rgba(0, 0, 0, 0.05),
+      inset 0px 1px 3px rgba(255, 255, 255, 0.15);
+    border-radius: 4px !important;
+    cursor: pointer;
+    & > button {
+      cursor: pointer;
+      border: none;
+      background: inherit;
+      &:hover,
+      &:focus {
+        background: inherit;
+      }
+    }
+    &:first-child {
+      border: 1px solid #ffe1e4eb;
+    }
+    &:last-child {
+      background: #f46f6f;
+      &:hover {
+        background: #ea5c5c;
+      }
+      & > button {
+        background: #f46f6f;
+        & > article {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+.MuiContainer-root {
+  max-width: 1440px !important;
+}
+.remove-response-modal {
+  width: 450px;
+}
+
+.response-warning-message {
+  color: #000000 !important;
+  display: flex;
+  font-size: 13px;
+  text-align: start;
+  line-height: normal;
+}
+
+.remove-attribute-modal__btn {
+  border-radius: 4px !important;
+}

@@ -1,0 +1,192 @@
+@import './variables.scss';
+
+@mixin margin($size, $position) {
+  .m#{str-slice($position, 0, 1)}-#{$size} {
+    margin-#{$position}: $size + px !important;
+  }
+  .m-#{$size} {
+    margin: $size + px;
+  }
+  .mx-#{$size} {
+    margin: 0 $size + px;
+  }
+  .my-#{$size} {
+    margin: $size + px 0;
+  }
+}
+
+@mixin position($value) {
+  position: $value;
+}
+
+@mixin padding($size, $position) {
+  .p#{str-slice($position, 0, 1)}-#{$size} {
+    padding-#{$position}: $size + px !important;
+  }
+  .p-#{$size} {
+    padding: $size + px;
+  }
+  .px-#{$size} {
+    padding: 0 $size + px;
+  }
+  .py-#{$size} {
+    padding: $size + px 0;
+  }
+}
+
+@mixin display($value) {
+  display: $value;
+}
+
+@mixin flex-direction($value) {
+  @if $value== 'col' {
+    flex-direction: column;
+  } @else if $value== 'col-reverse' {
+    flex-direction: column-reverse;
+  } @else {
+    flex-direction: $value;
+  }
+}
+
+@mixin align-items($value) {
+  @if $value==start or $value==end {
+    align-items: flex-#{$value};
+  } @else {
+    align-items: $value;
+  }
+}
+
+@mixin justify-content($value) {
+  @if $value==start or $value==end {
+    justify-content: flex-#{$value};
+  } @else if $value==between or $value==around {
+    justify-content: space-#{$value};
+  } @else {
+    justify-content: $value;
+  }
+}
+
+@mixin scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}
+
+@mixin flex-aligned {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-aligned-center-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-aligned-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin blocks-content {
+  background: $grey50;
+  border: 1px solid $grey200;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 2px rgba(232, 234, 235, 0.25);
+  border-radius: 4px;
+}
+
+@mixin background-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Position start
+@each $val in $positions {
+  .#{$val} {
+    @include position($val);
+  }
+}
+
+// Position end
+
+// Margin/Padding - Start
+@each $position in $positions {
+  @for $i from 0 through 100 {
+    @include margin($i, $position);
+    @include padding($i, $position);
+  }
+}
+
+// Height/Width - start
+@for $i from 0 through 60 {
+  .h-#{$i} {
+    height: $i * 8px;
+  }
+  .w-#{$i} {
+    width: $i * 8px;
+  }
+}
+
+// Flex - start
+@for $i from 1 through 25 {
+  .flex-#{$i} {
+    flex: #{$i};
+  }
+}
+
+@each $val in $displays {
+  .#{$val} {
+    @include display($val);
+  }
+}
+
+@each $val in $directions {
+  .flex-#{$val} {
+    @include flex-direction($val);
+  }
+}
+
+@each $val in $aligns {
+  .align-#{$val} {
+    @include align-items($val);
+  }
+}
+
+@each $val in $justify {
+  .justify-#{$val} {
+    @include justify-content($val);
+  }
+}
+
+@mixin dynamic-z-index {
+  @for $i from 1 through 110 {
+    .zx-#{$i} {
+      z-index: $i;
+    }
+  }
+}
+
+@include dynamic-z-index;

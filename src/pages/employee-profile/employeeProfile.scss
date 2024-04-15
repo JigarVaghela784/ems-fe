@@ -1,0 +1,220 @@
+.profile-section {
+  background: #fff;
+  min-height: 250px;
+  border-radius: 4px;
+  border: 1px solid #ededed;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+
+  .user-profile {
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    .profile-user-wrapper {
+      .profile-user-image {
+        height: 120px;
+        width: 120px;
+      }
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .details-section {
+      display: flex;
+      flex-direction: column;
+      .profile-title {
+        font-weight: 600;
+        font-size: 24px;
+        color: #333333;
+      }
+      .profile-employeeID {
+        color: #333333;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .profile-description {
+        color: #8e8e8e;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+  .user-data {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .user-data-wrapper {
+      .user-data-title {
+        color: #333333;
+        float: left;
+        font-weight: 600;
+        width: 30%;
+      }
+      .user-data-details {
+        color: #888888;
+        display: block;
+        overflow: hidden;
+        width: 70%;
+        float: left;
+      }
+    }
+    .edit-profile-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .user-data-title {
+        color: #1f1f1f;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.emp-detail-tabs {
+  span {
+    margin-left: 0;
+  }
+}
+
+.section-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  min-height: 250px;
+
+  &.section-table {
+    display: block;
+  }
+
+  .title {
+    color: #1f1f1f;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bank-section {
+    width: 50%;
+    border: 1px solid #ededed;
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    .bank-data {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .bank-data-wrapper {
+        .user-data-title {
+          color: #333333;
+          float: left;
+          font-weight: 600;
+          width: 40%;
+        }
+        .user-data-details {
+          color: #888888;
+          display: block;
+          overflow: hidden;
+          width: 60%;
+          float: left;
+        }
+      }
+    }
+  }
+  .experience-section {
+    background: #fff;
+    width: 50%;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    .experience-body {
+      .experience-content {
+        margin-bottom: 10px;
+        display: flex;
+        .dot-icon {
+          font-size: 35px;
+        }
+        .experience-time {
+          display: flex;
+          .experience-desc-range {
+            margin-left: 5px;
+            color: #a9a9a9;
+            display: block;
+            font-size: 12px;
+            line-height: 1.35;
+            font-weight: 500;
+          }
+        }
+        .exprience-title {
+          color: #333333;
+          font-weight: 500;
+
+          .exprience-title-jobPosition {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #888888;
+            font-weight: 400;
+          }
+        }
+        .experience-desc {
+          color: #a9a9a9;
+          display: block;
+          font-size: 12px;
+          line-height: 1.35;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .profile-section {
+    flex-direction: column;
+    position: relative;
+  }
+  .user-profile {
+    flex-direction: column;
+    width: 100% !important;
+    .profile-user-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .user-data {
+    width: 100% !important;
+    .edit-icon {
+      position: absolute;
+      right: 20px;
+      top: 25px;
+    }
+  }
+  .employee-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .bank-section {
+    width: 100% !important;
+  }
+  .experience-section {
+    width: 100% !important;
+  }
+}

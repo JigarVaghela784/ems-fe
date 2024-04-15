@@ -1,0 +1,402 @@
+@import '../src/@core/index.scss';
+@import '../src/pages/employees-data/Employees.scss';
+@import '../src/pages/employee-profile/employeeProfile.scss';
+@import './mixins';
+@import './src/components/ProjectProgress/projectProgress';
+@import './src/components/AvatarUploadModal/uploadImg';
+
+body {
+  color: #13304c !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.range-input {
+  .MuiOutlinedInput-notchedOutline {
+    border-color: transparent !important;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+.position-relative {
+  position: relative;
+}
+.w-full {
+  width: 100%;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.top-bar-logo {
+  display: none !important;
+}
+
+.MuiDataGrid-cell:focus {
+  outline: none !important;
+}
+
+.nav-header {
+  background: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background: #fff;
+    right: -1px;
+    top: 0;
+    z-index: 9999;
+  }
+}
+
+.slate-main {
+  height: 300px;
+  border: 1px solid rgb(204, 204, 204);
+  .MuiToolbar-root {
+    border-bottom: 1px solid rgb(204, 204, 204);
+  }
+
+  .btn-Slate {
+    .MuiButton-root {
+      min-width: 48px;
+      color: rgb(204, 204, 204);
+      span {
+        .MuiSvgIcon-root {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .slate-editor {
+    outline: none;
+    height: 200px !important;
+    margin: 18px;
+    overflow: auto;
+
+    span {
+      margin-top: 15px;
+    }
+  }
+}
+
+.menu-list {
+  padding-top: 10px;
+  .MuiListItem-root {
+    margin-top: 0 !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.layout-vertical-nav {
+  .MuiPaper-root {
+    border-right: 0 !important;
+  }
+
+  .scrollbar-container {
+    background: #13304c;
+  }
+}
+
+.MuiListItemButton-root {
+  padding: 0.5625rem 0.875rem !important;
+}
+
+.MuiDataGrid-cell--withRenderer {
+  outline: none !important;
+}
+
+.MuiDataGrid-cell {
+  outline: none !important;
+
+  &:focus,
+  &:hover,
+  &:focus-visible,
+  &:active {
+    outline: none !important;
+  }
+}
+
+.employee-data .grid-list-icons .grid-list-button{
+  .MuiButtonBase-root:first-child{
+    background-color: #f0f7ff;
+    border-radius: 1px;
+    border: 1px solid #1883c2;
+  }
+}
+
+.event-title {
+  color: #2e83c2;
+}
+.employee-list-wrap{
+  .employee-data-wrap {
+    padding-top: 0;
+  }
+}
+.employee-data{
+  .grid-list-icons{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -14px;
+
+    .grid-list-button{
+      transform: scale(0.6);
+      display: flex;
+      gap: 7px;
+      border: 1px solid #8f8f8f;
+      border-radius: 5px;
+    }
+
+  }
+}
+
+.employee-data {
+  position: relative;
+
+.employee-data{
+   .mt-30{
+     margin-top: 30px !important;
+   }
+}
+
+  .employee-tabs {
+    span {
+      margin-left: 0;
+    }
+  }
+  .grid-list-icon{
+    position: absolute;
+    top: 5px;
+    right: -12px;
+
+
+    .grid-list-button {
+      transform: scale(0.6);
+      display: flex;
+      gap: 7px;
+      border: 1px solid #8f8f8f;
+      border-radius: 5px;
+
+      .active {
+        background-color: #f0f7ff;
+        border-radius: 1px;
+        border: 1px solid #1883c2;
+      }
+    }
+  }
+}
+
+.user-text {
+  color: white !important;
+}
+
+.user-dropdown-line {
+  border-bottom: 1px solid white;
+  margin: 3px 0px 3px 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .MuiContainer-root {
+    max-width: 1420px !important;
+  }
+  .actions-left {
+    overflow: hidden;
+  }
+  .user-dropdown {
+    display: none !important;
+  }
+}
+
+.date-remove-req {
+  span.MuiFormLabel-asterisk {
+    display: none;
+  }
+}
+
+input[type='date']:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type='date']:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+.quotes {
+  text-align: center;
+}
+.actions-left {
+  justify-content: center;
+  font-family: BeautyMountainsPersonalUse;
+  font-size: 26px;
+  color: #1883c2;
+  overflow: hidden;
+  width: 85%;
+
+  .quotes {
+    max-width: 100%;
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.scrollTopFab {
+  &:hover {
+    background-color: #1883c2 !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #2e83c2;
+  cursor: pointer;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.MuiDataGrid-columnHeader {
+  &:focus,
+  &:focus-within {
+    outline: none !important;
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.data-table-wrapper {
+  height: 512px;
+  .MuiDataGrid-root {
+    .MuiDataGrid-main {
+      & > div:last-child {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.MuiDataGrid-pinnedColumnHeaders,
+.MuiDataGrid-pinnedColumns {
+  background: #fff !important;
+}
+.MuiDataGrid-columnHeader--sortable {
+  .MuiDataGrid-menuIcon {
+    display: none !important;
+  }
+}
+
+.scrollbar-css,
+.MuiDataGrid-virtualScroller {
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .footer-section {
+    display: flex;
+    gap: 4px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .grid-list {
+    top: 60px !important;
+    right: 0 !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .actions-left {
+    font-size: 15px;
+  }
+  .footer-section {
+    font-size: 14px !important;
+  }
+  .profile-tabs {
+    .MuiTabs-flexContainer {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  .employee-data {
+    margin-bottom: 7px;
+
+    .employee-data-tabs{
+      padding-top: 50px;
+    }
+
+  }
+  .user-profile-pic {
+    padding: 22px !important;
+  }
+  .btn-Save {
+    padding-left: 20px !important;
+  }
+  .project-list {
+    margin-top: 40px !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .footer-section {
+    flex-direction: column !important;
+    .footer-text {
+      text-align: center !important;
+    }
+  }
+}

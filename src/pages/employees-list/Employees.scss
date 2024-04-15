@@ -1,0 +1,55 @@
+.employee-table {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 15px;
+  grid-auto-rows: auto;
+}
+
+.no-data-found {
+  padding: 20px;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 33% 33% 31%;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1296px) {
+  .employee-table {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+
+@media (max-width: 986px) {
+  .employee-table {
+    grid-template-columns: 48% 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-table {
+    grid-template-columns: 100%;
+  }
+  .search-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 5px;
+    overflow-x: auto;
+    .btnEmployeeSearch {
+      height: 56px !important;
+    }
+  }
+  .MuiTabs-flexContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .MuiBox-root {
+    span {
+      display: block;
+    }
+  }
+}

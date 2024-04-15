@@ -1,0 +1,328 @@
+.bgWrapper {
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 8%;
+
+  .title {
+    font-family: HelloSunday, serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.confetti-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  overflow: hidden;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.confetti-wrapper2 {
+  transform: scaleX(-1);
+}
+
+.confetti-wrapper3 {
+  position: fixed;
+  top: -160px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.no-space-modal {
+  .MuiDialogContent-root {
+    padding: 0 !important;
+    min-width: 600px !important;
+  }
+}
+.card-bg-modal {
+  min-height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8%;
+  margin-left: 0;
+
+  .user-card-div {
+    text-align: center;
+    .title {
+      font-size: 24px;
+      color: white;
+      text-transform: uppercase;
+      font-family: Arial, serif;
+      font-weight: 600;
+    }
+    .title-2 {
+      font-size: 14px;
+      color: white;
+    }
+  }
+}
+.card-bg-welcome {
+  .names {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    height: 120px;
+
+    .welcome-title {
+      font-size: 34px;
+      color: white;
+    }
+    .welcome-designation {
+      font-weight: 100;
+      font-size: 20px;
+      color: white;
+    }
+    .welcome-date {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 15px;
+      color: white;
+    }
+  }
+  .events-profile-wrapper {
+    width: 190px !important;
+    height: 190px !important;
+    margin: 0 auto;
+    position: relative;
+    z-index: -1;
+    top: -5px;
+    .MuiBadge-root {
+      margin-left: 0 !important;
+    }
+    .events-user-image {
+      width: 300px !important;
+      height: 300px !important;
+      position: absolute;
+      top: -88px;
+      right: -150px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.card-bg-birthday {
+  .user-card-div {
+    margin-top: 15%;
+    margin-left: -25%;
+  }
+
+  .events-profile-wrapper {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto;
+
+    .MuiBadge-root {
+      margin-left: 0 !important;
+    }
+
+    .events-user-image {
+      width: 170px !important;
+      height: 170px !important;
+      border-radius: 6px;
+    }
+  }
+}
+
+.card-bg-anniversary {
+  .title {
+    line-height: 1;
+  }
+  .names {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    text-align: right;
+  }
+  .events-profile-wrapper {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto;
+
+    .MuiBadge-root {
+      margin-left: 0 !important;
+    }
+    .events-user-image {
+      width: 250px !important;
+      height: 250px !important;
+      border-radius: 6px;
+      position: absolute;
+      top: -40px;
+      left: -20px;
+      z-index: -1;
+    }
+  }
+}
+.no-space-modal {
+  .MuiPaper-root {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .card-bg-birthday {
+    .events-profile-wrapper {
+      width: 110px !important;
+      height: 110px !important;
+
+      .events-user-image {
+        width: 110px !important;
+        height: 110px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .event-wrapper {
+    .MuiDialogContent-root {
+      min-width: 250px !important;
+    }
+  }
+
+  .card-bg-welcome {
+    .names {
+      .welcome-title {
+        font-size: 24px;
+      }
+      .welcome-designation {
+        font-size: 16px;
+      }
+      .welcome-date {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .card-bg-modal {
+    .user-card-div {
+      text-align: center;
+      .title {
+        font-size: 15px;
+      }
+      .title-2 {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .card-bg-anniversary {
+    .names {
+      top: 30%;
+      right: 15%;
+    }
+    .events-profile-wrapper {
+      .events-user-image {
+        width: 240px !important;
+        height: 240px !important;
+        top: -28px;
+        left: -18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 520px) {
+  .card-bg-welcome {
+    .names {
+      bottom: 0px !important;
+    }
+    .events-profile-wrapper {
+      .events-user-image {
+        width: 245px !important;
+        height: 245px !important;
+        top: -54px;
+        right: -120px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .card-bg-welcome {
+    .names {
+      bottom: 26px !important;
+      .welcome-title {
+        font-size: 16px;
+      }
+      .welcome-designation {
+        font-size: 12px;
+      }
+      .welcome-date {
+        font-size: 10px;
+      }
+    }
+    .events-profile-wrapper {
+      .events-user-image {
+        width: 185px !important;
+        height: 185px !important;
+        top: -20px;
+        right: -92px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 420px) {
+  .card-bg-anniversary {
+    .names {
+      top: 34%;
+      right: 15%;
+    }
+    .events-profile-wrapper {
+      .events-user-image {
+        width: 155px !important;
+        height: 155px !important;
+        top: 5px;
+        left: -12px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 520px) {
+  .card-bg-anniversary {
+    .names {
+      top: 32%;
+      right: 15%;
+    }
+    .events-profile-wrapper {
+      .events-user-image {
+        width: 195px !important;
+        height: 195px !important;
+        top: -15px;
+        left: -15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .event-wrapper {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+$inter-medium: 'inter-medium';
+$inter-bold: 'inter-bold';
+$inter-thin: 'inter-thin';
+$inter-semi-bold: 'inter-semi-bold';
+$inter-regular: 'inter-regular';
+$inter-light: 'inter-light';
+$inter-extra-light: 'inter-extra-light';
+$inter-bold: 'inter-bold';
+$inter-black: 'inter-black';
+
+// End Fonts
+
+$positions: ('top', 'left', 'bottom', 'right');
+
+$activeElementBoxShadow: 0 0 4px rgba(15, 42, 141, 0.6);
+$displays: (block, inline-block, inline, flex, inline-flex, hidden, none);
+
+$directions: (row, row-reverse, col, col-reverse);
+
+$aligns: (stretch, start, center, end, baseline);
+
+$justify: (start, center, end, between, around);
+
+$weights: (medium, semibold, regular);
+
+$colorPrimary: #c4c4c4;
+$colorGreySecondary: #595959;
+$colorGreyBold: #373f41;
+$activeColor: #2566e8;
+$hoverColor: #d9d9d9;
+$selectedColor: #156ae5;
+$primary-color: #156ae5;
+$errorColor: #ff4d4f;
+$errorShadowColor: rgba(255, 38, 5, 0.2);
+/* colors */
+
+// blue --start
+$blue: #156ae5;
+$darkBlue: #0045ad;
+$lightBlue: #e4efff;
+$backgroundBlue: #b5def4;
+
+// blue --end
+
+// grey --start
+$fullBlack: #000000;
+$black: #131f28;
+// $black: $black Older Color
+$grey700: #505d66;
+$grey600: #697985;
+$grey500: #8e9ba6;
+$grey400: #a7b5be;
+$grey300: #ccd2d7;
+$grey200: #e1e4eb;
+$grey100: #eceef3;
+$grey50: #f7f8fc;
+$white: #ffffff;
+// grey --end
+$grey-black: #131f28;
+$grey-black500: #002b4a;
+
+// additional --start
+$red: #f46f6f;
+$redDark: #db6363;
+$green: #00ce84;
+$orange: #e99430;
+// additional --end
+
+$colors: (
+  $fullBlack,
+  $black,
+  $grey600,
+  $grey500,
+  $grey400,
+  $grey300,
+  $grey200,
+  $grey100,
+  $grey50,
+  $white
+);
+
+$pages-layout-width: 1180px;
+$pages-top-padding: 44px;
+$pages-left-padding: 56px;
+$pages-content-top-padding: 40px;
+$z-index1: 110; // Card creator backdrop
+$z-index2: 230 !important; // Tiny popover container
+$z-index3: 255 !important; // custom menu
+$z-index4: 175 !important; // Frame block
+$z-index5: 180 !important; // tags select
+$z-index6: 210 !important; // Time selector

@@ -1,0 +1,81 @@
+.employee-table {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 15px;
+  grid-auto-rows: auto;
+  column-gap: 1%;
+}
+.employee-list-wrap{
+  background: #fff;
+  min-height: 160px;
+  border-radius: 4px;
+  border: 1px solid #ededed;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  margin-top: 24px;
+  position: relative;
+}
+
+.no-data-found {
+  padding: 20px;
+}
+
+.infinite-scroll-loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.search-bar {
+  display: grid;
+  margin: 10px 0;
+  grid-template-columns: 49% 49%;
+  gap: 1.8%;
+  margin-bottom: 12px;
+
+}
+
+@media (max-width: 1296px) {
+  .employee-table {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+
+@media (max-width: 986px) {
+  .employee-table {
+    grid-template-columns: 48% 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-table {
+    grid-template-columns: 100%;
+  }
+  .search-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 5px;
+    .btnEmployeeSearch {
+      height: 56px !important;
+    }
+  }
+  .MuiTabs-flexContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.todays-leaves {
+  position: relative;
+  .MuiBox-root {
+    span {
+      margin-left: 0 !important;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .MuiBox-root {
+    span {
+      display: block;
+    }
+  }
+}

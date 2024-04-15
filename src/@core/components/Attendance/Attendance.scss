@@ -1,0 +1,467 @@
+.teamleavesStatus {
+  margin-left: -10px;
+}
+
+.attendance-wrapper {
+}
+.timesheet-wrapper {
+  //margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  min-height: 450px;
+  .timeSheetDetails {
+    width: 33%;
+  }
+}
+
+.space-width {
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.holiday-event-height {
+  overflow-y: auto;
+  height: 245px;
+}
+
+.editMode {
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 5px;
+  & > .MuiButtonBase-root.MuiIconButton-root {
+    height: max-content;
+    margin-top: 11px;
+  }
+}
+.block-border {
+  border: 1px solid #ededed;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.holiday-leaves-width {
+  .block-leaves {
+    height: 100%;
+  }
+
+  .todays-leaves {
+    .MuiTab-root:last-child {
+      margin-left: auto !important;
+    }
+  }
+}
+.holiday-leaves-width {
+  .block-event {
+    .block-full-height{
+      height: 100%;
+      margin-bottom: 0!important;
+    }
+    background: transparent;
+    padding: 0;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: none;
+
+    .title {
+      color: #13304c;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.block-wrapper {
+  border: 1px solid #ededed;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  min-height: 100%;
+
+  .title {
+    color: #13304c;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+
+    span {
+      font-size: 18px;
+      margin-left: 10px;
+      color: #1883c2;
+      font-weight: 700;
+    }
+  }
+
+  .punching-block {
+    text-align: center;
+    padding: 20px;
+    .punch-hours {
+      border: 5px solid #e3e3e3;
+      font-size: 18px;
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      color: #1883c2;
+
+      .remaining-time,.null-remaining-time{
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .remaining-time{
+        color: #ff2222;
+      }
+      .null-remaining-time{
+        color: green;
+      }
+    }
+  }
+  .inner-block {
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 10px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 4px;
+    height: 62px;
+
+    .small-text {
+      font-weight: 600;
+      font-size: 12px;
+      color: #1f1f1f;
+    }
+    .small-text-lower {
+      text-align: center;
+      font-weight: 600;
+      font-size: 12px;
+      color: #1f1f1f;
+      text-align: center;
+      margin: 0 auto;
+      width: max-content;
+    }
+    .medium-text {
+      color: #727272;
+      font-size: 14px;
+    }
+  }
+  .lower-blocks {
+    display: flex;
+    gap: 20px;
+  }
+  .activities {
+    display: flex;
+
+    .icon {
+      font-size: 30px;
+    }
+
+    .activity-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      .activity-status {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .activity-time {
+        font-size: 12px;
+        font-weight: 500;
+        color: green;
+      }
+      .activity-timeout {
+        color: red;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      &.edit-activity-wrapper {
+        padding-right: 4px;
+        padding-top: 8px;
+        max-width: 110px;
+        margin-bottom: 10px;
+      }
+      .time-picker {
+        margin-top: 10px;
+        .MuiSvgIcon-root {
+          font-size: 16px !important;
+        }
+        .MuiInputBase-input {
+          padding: 8px 4px 7px 8px;
+          font-size: 11px;
+        }
+      }
+      .MuiSelect-select {
+        font-size: 11px !important;
+        padding: 4px 4px 4px 8px;
+      }
+      .MuiOutlinedInput-notchedOutline {
+        font-size: 12px !important;
+        span,
+        legend {
+          font-size: 12px !important;
+        }
+      }
+      .MuiFormLabel-root {
+        font-size: 12px !important;
+        margin-top: 2px;
+        margin-left: 4px;
+        transform: translate(14px, 5px) scale(1);
+      }
+      .MuiInputLabel-shrink {
+        transform: translate(14px, -9px) scale(0.75) !important;
+      }
+    }
+  }
+  .progress-loader:last-child {
+    margin-bottom: 0;
+  }
+  .progress-loader {
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0 0 25px;
+    padding: 20px 15px;
+
+    .MuiLinearProgress-root {
+      background-color: #e3e3e3 !important;
+    }
+    .progress-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      .progress-day {
+        font-size: 12px;
+        font-weight: 500;
+        color: #1f1f1f;
+      }
+      .progress-time {
+        font-size: 12px;
+        font-weight: 600;
+        color: #1f1f1f;
+      }
+    }
+  }
+}
+
+.block-wrapper-scroll {
+  overflow-y: scroll;
+  padding: 0 20px 10px;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #13304b;
+  }
+
+  .no-data {
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .title {
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+  }
+}
+
+.search-bar-employees {
+  margin: 10px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 48% 48%;
+  grid-gap: 4%;
+  gap: 4%;
+}
+.attendance-section-wrapper {
+  background: #fff;
+  min-height: 250px;
+  border-radius: 4px;
+  border: 1px solid #ededed;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.total-time-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .title-wrapper {
+    border: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f1f1f;
+
+    .time-wrapper,
+    .leaves-wrapper {
+      font-weight: 600;
+    }
+  }
+}
+
+.activities-wrapper {
+  max-height: 370px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #13304c;
+  }
+}
+
+.page-center {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  .attendance-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .timesheet-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    .timeSheetDetails {
+      width: 48%;
+    }
+    .statisticsDetails {
+      width: 100%;
+    }
+  }
+}
+.inner-block,
+.progress-loader,
+.punch-hours {
+  background-color: #fafafa;
+}
+.holiday-leaves-width {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .timesheet-wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    .timeSheetDetails {
+      width: 100%;
+    }
+  }
+  .holiday-leaves-wrapper {
+    flex-direction: column;
+    margin-top: 0px !important;
+  }
+  .holiday-leaves-width {
+    width: 100% !important;
+  }
+}
+
+.holiday-leaves-wrapper {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+.holidayTitle {
+  margin: 0;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.holidayDate {
+  font-size: 12px;
+  line-height: 1.3;
+}
+.holidayList {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .timesheet-wrapper {
+    .statisticsDetails {
+      order: 3;
+    }
+    .todaysActivityDetails {
+      order: 2;
+    }
+  }
+}
+
+.todaysActivityDetails {
+  .activities-wrapper {
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar-employees {
+    padding: 6px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    .btnAttendanceSearch {
+      height: 56px !important;
+    }
+  }
+  .total-time-wrapper {
+    flex-direction: column;
+    gap: 8px;
+    .title-wrapper {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .total-time-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    .title-wrapper {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1320px) {
+  .total-time-wrapper {
+    .title-wrapper {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+  }
+}

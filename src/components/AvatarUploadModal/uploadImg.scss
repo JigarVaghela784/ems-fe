@@ -1,0 +1,101 @@
+//@import '../../../styles/variables.scss';
+
+.avatar-upload {
+  z-index: 99999;
+  .active {
+    z-index: 99999;
+  }
+}
+.avatar-upload-modal {
+  .modal-footer-upload-image {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #d2d2d2;
+    padding-top: 16px;
+
+    button {
+      margin: 0 2px;
+    }
+  }
+
+  .ant-modal-header {
+    border-radius: 8px;
+  }
+
+  .ant-modal-body {
+    padding-bottom: 0 !important;
+  }
+}
+.newImageInput {
+  input[type='file'] {
+    color: transparent;
+  }
+}
+
+.btnUploadLoading {
+  background: #efefef;
+  width: 78px;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: center !important;
+  align-items: center;
+  margin: 0 2px;
+  cursor: not-allowed;
+  display: flex;
+  .ant-spin-spinning {
+    margin-top: 3px;
+  }
+}
+.btnUpload {
+  width: 78px !important;
+  cursor: pointer;
+  text-align: center;
+  &.uploading:disabled,
+  &.uploading:focus {
+    background-color: #3987e7 !important;
+    background: #3987e7 !important;
+    color: $white !important;
+    opacity: 0.8;
+  }
+  .ant-spin-spinning {
+    justify-content: center !important;
+  }
+}
+.reactCropWrapper {
+  display: flex;
+  justify-content: center;
+  max-height: 250px;
+  cursor: unset !important;
+  .ReactCrop__child-wrapper {
+    text-align: center;
+  }
+  img {
+    width: auto;
+  }
+}
+.ant-modal-footer {
+  .ant-skeleton {
+    width: 77px !important;
+    height: 32px !important;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-left: 5px;
+  }
+}
+.upload-image-modal-loading-wrapper {
+  .custom-progress-bar {
+    margin-top: 18px;
+    &__description {
+      display: none;
+    }
+  }
+  .progressBar-cancel-btn-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .avatar-upload-modal {
+    width: 320px !important;
+  }
+}

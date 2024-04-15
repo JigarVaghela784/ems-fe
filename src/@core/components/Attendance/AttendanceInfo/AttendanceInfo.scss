@@ -1,0 +1,94 @@
+.checkIcon {
+  color: green !important;
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer;
+}
+.checkIconWrapper {
+  margin: 0 auto;
+  svg {
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid green;
+  }
+  .checkIcon {
+    color: green !important;
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+  }
+}
+.closeIconWrapper {
+  margin: 0 auto;
+  svg {
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid red;
+  }
+  .closeIcon {
+    color: red !important;
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+  }
+}
+.total-workingTime,.total-OverTime{
+  margin: 0 auto;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 5px;
+}
+.header-date {
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.attendanceIcon {
+  margin: 0 auto;
+  img {
+    width: 20px;
+  }
+}
+
+.search-project {
+  grid-template-columns: 49% 49%!important;
+}
+
+.search-attendance-employees {
+  margin: 10px 0;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 32.8% 32.8% 32.8%;
+  gap: 8px;
+  margin-bottom: 11px;
+}
+.attendance-admin-wrapper {
+  .MuiDataGrid-columnHeader {
+    &:first-child {
+      .MuiDataGrid-columnHeaderTitleContainerContent {
+        margin: 0 auto;
+      }
+    }
+    .MuiDataGrid-columnHeaderTitleContainerContent {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .search-attendance-employees {
+    grid-template-columns: repeat(2, 1fr);
+    .btnEmpAttendSearch {
+      height: 56px !important;
+    }
+  }
+  .search-project {
+    grid-template-columns: 49% 49% !important;
+    gap: 12px;
+  }
+}
