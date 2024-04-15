@@ -26,8 +26,6 @@ import { Axios } from '../../../api/axios'
 import CustomButton from '../../@core/layouts/components/shared-components/CustomButton'
 import { FormHelperText } from '@mui/material'
 import CustomInput from '../../components/CustomInput'
-import Image from 'next/image'
-import CiphernutzLogo from 'src/asset/image/CiphernutzLogo.svg'
 import dayjs from 'dayjs'
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -142,9 +140,7 @@ const LoginPage = () => {
     <Box className='content-center'>
       <Card sx={{ zIndex: 1 }}>
         <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
-          {/*<Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 4 }}>*/}
-          {/*  <Image src={CiphernutzLogo.src} width={200} height={60} alt='CiphernutzLogo' />*/}
-          {/*</Box>*/}
+
           <Box sx={{ mb: 6 }}>
             <Typography variant='h5' sx={{ fontWeight: 600, marginBottom: 1.5, textAlign: 'center' }}>
               Welcome to {themeConfig.templateName}! 👋🏻

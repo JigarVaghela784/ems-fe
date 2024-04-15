@@ -37,7 +37,6 @@ import { Axios } from '../../../api/axios'
 import { getCookie, setCookie } from 'cookies-next'
 import CustomButton from '../../@core/layouts/components/shared-components/CustomButton'
 import CustomInput from '../../components/CustomInput'
-import CiphernutzLogo from 'src/asset/image/CiphernutzLogo.svg'
 import AvatarUploadModal from 'src/components/AvatarUploadModal'
 
 // ** Styled Components
@@ -215,9 +214,7 @@ const RegisterPage = ({ data = {} }) => {
       <Box className='content-center'>
         <Card sx={{ zIndex: 1 }}>
           <CardContent sx={{ padding: theme => `${theme.spacing(12, 9, 7)} !important` }}>
-            {/*<Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.7em' }}>*/}
-            {/*  <Image src={CiphernutzLogo.src} width={200} height={60} alt='CiphernutzLogo' />*/}
-            {/*</Box>*/}
+
             <Box sx={{ mb: 6 }}>
               <Typography variant='h5' sx={{ fontWeight: 600, marginBottom: 1.5, textAlign: 'center' }}>
                 Adventure starts here 🚀

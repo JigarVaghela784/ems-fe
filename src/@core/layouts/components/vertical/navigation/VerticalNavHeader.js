@@ -8,7 +8,6 @@ import cs from 'classnames'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import CiphernutzLogo from 'src/asset/image/CiphernutzLogo.svg'
 import { baseUrl } from 'utils/consts'
 import Image from 'next/image'
 
@@ -48,11 +47,7 @@ const VerticalNavHeader = props => {
       {userVerticalNavMenuBranding ? (
         userVerticalNavMenuBranding(props)
       ) : (
-        <Link href={baseUrl} passHref>
-          <StyledLink>
-            <Image src={CiphernutzLogo.src} width={200} height={60} alt='CiphernutzLogo' />
-          </StyledLink>
-        </Link>
+        <div>EMS</div>
       )}
     </MenuHeaderWrapper>
   )

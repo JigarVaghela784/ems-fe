@@ -51,7 +51,7 @@ const AppBarContent = props => {
     <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       <Head>
         <title>
-          {`${elapsedTime > 0 && timerRunning ? formattedTime(elapsedTime) : ''} ${themeConfig.templateName} - HRMS`}{' '}
+          {`${elapsedTime > 0 && timerRunning ? formattedTime(elapsedTime) : ''} ${themeConfig.templateName} - EMS`}{' '}
         </title>
       </Head>
       <div>
