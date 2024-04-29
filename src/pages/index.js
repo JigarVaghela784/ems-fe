@@ -53,7 +53,7 @@ const Dashboard = () => {
           setUpcomingHolidayLoading(false)
         })
     }
-  }, [user])
+  }, [setAttendance, setAttendanceHoliday, setAttendanceList, setAttendanceLoading, setUpcomingHoliday, setUpcomingHolidayLoading, user])
 
   return (
     <>

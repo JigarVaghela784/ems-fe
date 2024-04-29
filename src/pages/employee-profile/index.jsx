@@ -187,7 +187,7 @@ const EmployeeProfile = ({ allUsers }) => {
     }
 
     return [projects]
-  }, [userData, userId, isAccessToEdit, handleUpdate])
+  }, [userData, handleUpdate, userId, updatedDataLoading, projectUpdate, handleSaveUpdate, handleDeleteUpdate, isAccessToEdit])
 
   return (
     <>
