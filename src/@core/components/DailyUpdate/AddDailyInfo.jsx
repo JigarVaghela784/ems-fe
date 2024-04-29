@@ -58,37 +58,6 @@ const AddDailyInfo = ({ isOpenModal = {}, handleCloseModal, handleSave, withProj
       payload.updates = dailyUpdate
       payload.save_as_draft = null
     }
-
-    setLoadingAPI(true)
-    if (name === 'add') {
-      await Axios.post('project-update/add', payload)
-        .then(data => {
-          if (handleSave) {
-            handleSave(data, 'add')
-          }
-          toast.success('Update added successfully')
-          handleCloseModal()
-        })
-        .catch(e => {
-          console.log(e)
-          toast.error(e?.response?.data?.message || e.message)
-          setLoadingAPI(false)
-        })
-    } else {
-      await Axios.patch('project-update/edit', { id, ...payload })
-        .then(data => {
-          if (handleSave) {
-            handleSave(data, 'edit')
-          }
-          toast.success('Update edited successfully')
-          handleCloseModal()
-        })
-        .catch(e => {
-          console.log(e)
-          toast.error(e?.response?.data?.message || e.message)
-          setLoadingAPI(false)
-        })
-    }
   }
 
   const handleChange = e => {

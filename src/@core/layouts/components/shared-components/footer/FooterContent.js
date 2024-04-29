@@ -8,8 +8,7 @@ const FooterContent = () => {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', ml: 'auto' }}>
       <Typography sx={{ mr: 'auto', ml: 'auto' }} className='footer-section'>
-        {`Copyright ${new Date().getFullYear()}. All Rights Reserved by`}{' '}
-          EMS
+        {`Copyright ${new Date().getFullYear()}. All Rights Reserved by`} EMS
       </Typography>
     </Box>
   )

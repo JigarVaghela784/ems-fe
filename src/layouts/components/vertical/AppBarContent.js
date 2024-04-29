@@ -18,7 +18,6 @@ const AppBarContent = props => {
   const [timerRunning, setTimerRunning] = useState(false)
   const [startTime, setStartTime] = useState(null)
 
-
   useEffect(() => {
     if (activity.length > 0) {
       const timeVal = getOneDayTime(activity, ACTIVITY.PUNCH_IN, 'milliseconds', (time, diff) => {
@@ -51,7 +50,7 @@ const AppBarContent = props => {
     <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       <Head>
         <title>
-          {`${elapsedTime > 0 && timerRunning ? formattedTime(elapsedTime) : ''} ${themeConfig.templateName} - EMS`}{' '}
+          {`${elapsedTime > 0 && timerRunning ? formattedTime(elapsedTime) : ''} ${themeConfig.templateName}`}{' '}
         </title>
       </Head>
       <div>

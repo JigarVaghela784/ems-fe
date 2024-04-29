@@ -437,7 +437,6 @@ export const getRoleMembers = (employees = []) => {
     team_leader: [],
     employee: []
   }
-
   employees.forEach(member => {
     const updateMemberProjects = member.employee?.projects.reduce((result, current) => {
       const existingItem = result.find(item => item.projectId === current.projectId)

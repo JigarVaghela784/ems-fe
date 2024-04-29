@@ -35,7 +35,8 @@ const ProjectDetails = () => {
   const { isAdmin, isHR } = getUserRoles(user.role)
   const [updatedDataLoading, setUpdatedDataLoading] = useState(false)
   const { projectUpdate, setProjectUpdate } = useProjectUpdateStore()
-  const { projectList } = useProjectStore()
+
+  console.log('@@@@@projectList', project)
 
   useEffect(() => {
     setLoading(true)
@@ -47,14 +48,7 @@ const ProjectDetails = () => {
         router.push('/projects')
       }
     })
-
-    setUpdatedDataLoading(true)
-    Axios.get(`project-update?projectId=${projectId}`)
-      .then(data => {
-        setProjectUpdate(data.data)
-      })
-      .finally(() => setUpdatedDataLoading(false))
-  }, [projectId, setProject, router])
+  }, [projectId, router])
 
   useEffect(() => {
     if (project) {
@@ -234,31 +228,6 @@ const ProjectDetails = () => {
                       )
                     })}
                   </Grid>
-
-                  {/*TODO: Project daily update code ( Do not remove )*/}
-                  {/*<div className='mt-10'>*/}
-                  {/*  {updatedDataLoading ? (*/}
-                  {/*    <div className='leave-wrapper pl-0 pt-11'>*/}
-                  {/*      <CardHeader*/}
-                  {/*        className='them-color'*/}
-                  {/*        title={<span style={{ width: 'fit-content' }}>Daily Update</span>}*/}
-                  {/*      />*/}
-                  {/*      <div className='mt-50 mb-90 d-flex align-center justify-center'>*/}
-                  {/*        <Loader />*/}
-                  {/*      </div>*/}
-                  {/*    </div>*/}
-                  {/*  ) : (*/}
-                  {/*    <DailyInfo*/}
-                  {/*      projectId={projectId}*/}
-                  {/*      grid={12}*/}
-                  {/*      update={projectUpdateList}*/}
-                  {/*      updatedData={projectUpdate}*/}
-                  {/*      handleSave={handleAdd}*/}
-                  {/*      handleDelete={handleRemove}*/}
-                  {/*      dailyInfo={projectUpdate}*/}
-                  {/*    />*/}
-                  {/*  )}*/}
-                  {/*</div>*/}
                 </Grid>
 
                 <Grid item lg={4} md={5} xs={12}>

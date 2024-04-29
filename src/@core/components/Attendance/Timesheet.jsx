@@ -28,19 +28,6 @@ const Timesheet = ({}) => {
   const { activity = [] } = attendance || {}
   const { upcomingHoliday } = useHolidaysStore()
 
-  // TODO: Project daily update code ( Do not remove )
-  // const { projectList, setProjectList } = useProjectStore()
-  // const { projectUpdate, setProjectUpdate } = useProjectUpdateStore()
-  // const [updatedDataLoading, setUpdatedDataLoading] = useState(false)
-  // const [loading, setLoading] = useState(false)
-  // const [activeProjectId, setActiveProjectId] = useState(null)
-
-  //TODO: Project daily update code ( Do not remove )
-  //
-  // const handleChange = (event, newValue) => {
-  //   setActiveProjectId(newValue)
-  // }
-
   const totalBreak = useMemo(() => {
     const { hr, min } = totalBreakTime(activity)
     if (hr || min) return { hr, min }
@@ -148,8 +135,8 @@ const Timesheet = ({}) => {
   // }, [projectUpdate])
 
   const upcomingData = useMemo(() => {
-    return  upcomingHoliday.length > 0
-  }, [ upcomingHoliday])
+    return upcomingHoliday.length > 0
+  }, [upcomingHoliday])
 
   return (
     <div className='attendance-wrapper'>
@@ -214,7 +201,7 @@ const Timesheet = ({}) => {
 
       <div className='holiday-leaves-wrapper'>
         <DashboardLeaves upcomingData={upcomingData} />
-        {(upcomingHoliday.length > 0 ) && (
+        {upcomingHoliday.length > 0 && (
           <div className='holiday-leaves-width'>
             <div className='block-event'>
               {upcomingHoliday.length > 0 && (
@@ -242,7 +229,6 @@ const Timesheet = ({}) => {
             </div>
           </div>
         )}
-
       </div>
     </div>
   )

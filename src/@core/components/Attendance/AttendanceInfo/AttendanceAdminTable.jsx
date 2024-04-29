@@ -413,7 +413,7 @@ const AttendanceAdminTable = () => {
         shallow: true
       }
     )
-  }, [searchNameDebounce, searchData.from, searchData.to])
+  }, [searchNameDebounce, searchData.from, searchData.to, query, searchData.name, router, pathname])
 
   const handleChange = e => {
     const { name, value } = e.target

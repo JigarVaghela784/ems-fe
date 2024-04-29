@@ -47,7 +47,7 @@ const VerticalNavHeader = props => {
       {userVerticalNavMenuBranding ? (
         userVerticalNavMenuBranding(props)
       ) : (
-        <div>EMS</div>
+        <Box sx={{ fontSize: 24, fontWeight: 700 }}>EMS</Box>
       )}
     </MenuHeaderWrapper>
   )

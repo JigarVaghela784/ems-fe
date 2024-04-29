@@ -100,14 +100,6 @@ const EmployeeProfile = ({ allUsers }) => {
       }
       setLoading(false)
     })
-
-    // TODO: Add 'update' key in array to display update info
-    // setUpdatedDataLoading(true)
-    // Axios.get(`project-update?userId=${userId}`)
-    //   .then(data => {
-    //     setProjectUpdate(data.data)
-    //   })
-    //   .finally(() => setUpdatedDataLoading(false))
   }, [userId])
 
   const tabList = useMemo(() => {

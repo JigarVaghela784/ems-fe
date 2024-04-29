@@ -45,7 +45,6 @@ const TodaysActivityList = ({ item, editMode, activity, setActivity, index }) =>
               size='small'
               title='Status'
               value={item.status}
-
               //onChange={e => setActivity({ ...activity, status: e.target.value })}
               onChange={({ target: { value } }) => handleChange(value, 'status')}
               options={[
@@ -63,7 +62,6 @@ const TodaysActivityList = ({ item, editMode, activity, setActivity, index }) =>
                 <TimePicker
                   value={dayjs(item.time)}
                   label='Time'
-
                   //onChange={newValue => setActivity({ ...activity, time: newValue })}
                   onChange={value => handleChange(value, 'time')}
                 />

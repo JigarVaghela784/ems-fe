@@ -33,7 +33,6 @@ const ProjectList = ({ showBreadCrumb = true, userId }) => {
   const [filterEmployeeName, setFilterEmployeeName] = useState(searchEmployee || '')
   const [isGrid, setIsGrid] = useState(false)
   const projectNameDebounce = useDebounce(filterProjectName, 1000)
-
   useEffect(() => {
     setLoading(true)
     const url = userId ? `project?userId=${userId}` : 'project'
@@ -140,7 +139,6 @@ const ProjectList = ({ showBreadCrumb = true, userId }) => {
               onClick={() => {
                 setIsOpenModal({ open: !isOpenModal.open, id: null })
               }}
-              disabled
             >
               Add Project
             </CustomButton>

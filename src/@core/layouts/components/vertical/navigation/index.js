@@ -71,7 +71,7 @@ const Navigation = props => {
 
   return (
     <Drawer {...props}>
-      {/*<VerticalNavHeader {...props} />*/}
+      <VerticalNavHeader {...props} />
       <Box className='menu-list' sx={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
         <ScrollWrapper
           containerRef={ref => handleInfiniteScroll(ref)}

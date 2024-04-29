@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import CustomTable from 'src/@core/layouts/components/shared-components/CustomTable'
 import { getRoleMembers } from 'utils/helper'
 import AvatarGroup from '../../../../components/AvatarGroup'
 import useWindowSize from '../../../../hooks/useWindowSize'
 import { Avatar } from '@mui/material'
+import { Axios } from '../../../../../api/axios'
 
 const ProjectData = ({ filteredProjects }) => {
   const router = useRouter()
@@ -22,6 +23,10 @@ const ProjectData = ({ filteredProjects }) => {
   const updatedTableRows = useMemo(() => {
     return tableRowsUpdated || []
   }, [tableRowsUpdated])
+
+  const getProjectUser = async id => {
+    return id && (await Axios.get(`user/${id}`))
+  }
 
   const columns = [
     { field: 'index', headerName: '#', width: 90 },
@@ -87,8 +92,10 @@ const ProjectData = ({ filteredProjects }) => {
             return
           }
 
-          const updateList = roleMembers[role].map(d => {
-            return { ...d, name: d.employee.name }
+          const updateList = roleMembers[role].map(async d => {
+            const user = await getProjectUser(d.employeeId)
+
+            return { ...d, name: user.name }
           })
 
           return (
@@ -114,8 +121,10 @@ const ProjectData = ({ filteredProjects }) => {
             return
           }
 
-          const updateList = roleMembers[role].map(d => {
-            return { ...d, name: d.employee.name }
+          const updateList = roleMembers[role].map(async d => {
+            const user = await getProjectUser(d.employeeId)
+
+            return { ...d, name: user.name }
           })
 
           return (
@@ -142,8 +151,11 @@ const ProjectData = ({ filteredProjects }) => {
             return
           }
 
-          const updateList = roleMembers[role].map(d => {
-            return { ...d, name: d.employee.name }
+          const updateList = roleMembers[role].map(async d => {
+            const user = await getProjectUser(d.employeeId)
+            console.log('@@@user', user)
+
+            return { ...d, name: user.name }
           })
           const showAvatar = totalEmployees >= 4
           const displayList = showAvatar ? updateList.slice(0, 2) : updateList
